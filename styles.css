@@ -118,7 +118,11 @@ b {
   width: 96%;
   margin: 0 auto;
   gap: 1.8rem;
-  grid-template-columns: 12rem auto 23rem; /* TODO what is the meaing ？ */
+  grid-template-columns: 12rem auto 23rem;
+  /* 这里的 grid-template-columns 设置了三列：
+  第一列宽度为 12rem （rem是相对于根元素（html元素）的字体大小的单位）。
+  第二列宽度为 auto，这意味着这一列的宽度会根据剩余空间自动调整。
+  第三列宽度为 23rem。*/
 }
 
 aside {
@@ -226,7 +230,8 @@ main {
 
 main .analyse {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* TODO what is the meaing ？ */
+  grid-template-columns: repeat(3, 1fr);
+  /* repeat(3, 1fr) 表示创建三个等宽的列。这里 repeat 函数是一个简化多次重复写同样的值的方法，3 表示重复次数，1fr 是一个灵活的长度单位，表示每列分配容器中可用空间的等份。*/
   gap: 1.6rem;
 }
 
@@ -269,27 +274,26 @@ main .analyse svg {
 
 main .analyse svg circle {
   fill: none;
-  stroke-width: 10;
-  stroke-linecap: round;
-  transform: translate(5px, 5px); /* TODO what is the meaing ？ */
+  stroke-width: 10; /* 这个属性定义了图形边框的宽度 */
+  stroke-linecap: round; /* 这个属性指定线条末端的形状。round 表示线条的末端是圆形的，这通常用于当线条单独存在时（如线段或路径的起点和终点），给线条一个更平滑、圆润的结束。*/
+  transform: translate(5px, 5px);
+  /* 这个属性定义了元素的 2D 转换，translate() 方法移动元素，移动的距离由参数定义。translate(5px, 5px) 表示将图形在水平方向（x轴）和垂直方向（y轴）上分别移动5像素 */
 }
 
 main .analyse .sales svg circle {
   /* TODO what is the meaing ？ */
   stroke: var(--color-success);
-  stroke-dashoffset: -30;
-  stroke-dasharray: 200;
+  stroke-dashoffset: -30; /* 这个属性定义了设置SVG的描边中虚线模式开始的位置。*/
+  stroke-dasharray: 200; /* 这个属性定义了设置SVG的描边中虚线模式的长度 */
 }
 
 main .analyse .visits svg circle {
-  /* TODO what is the meaing ？ */
   stroke: var(--color-danger);
   stroke-dashoffset: -30;
   stroke-dasharray: 200;
 }
 
 main .analyse .searches svg circle {
-  /* TODO what is the meaing ？ */
   stroke: var(--color-primary);
   stroke-dashoffset: -30;
   stroke-dasharray: 200;
