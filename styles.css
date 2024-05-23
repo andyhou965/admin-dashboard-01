@@ -309,3 +309,39 @@ main .analyse .progress .percentage {
   height: 100%;
   width: 100%;
 }
+
+main .new-users {
+  margin-top: 1.3rem;
+}
+
+main .new-users .user-list {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* 这个属性定义了元素的过渡效果，使元素的属性值在一定时间内平滑地过渡 */
+}
+
+main .new-users .user-list:hover {
+  box-shadow: none;
+}
+
+main .new-users .user-list .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .new-users .user-list .user img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 0.4rem;
+  border-radius: 50%;
+}
